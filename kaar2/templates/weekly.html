@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Yearly Sales Prediction</title>
+</head>
+<body>
+    <h1>Yearly Sales Prediction</h1>
+    <form method="POST">
+        <label for="week">Enter week:</label>
+        <input type="number" id="year" name="week" required>
+        <br><br>
+        <input type="submit" value="Predict Sales">
+    </form>
+    {% if yearly_sales %}
+        <p>The predicted sales for year {{ request.form['year'] }} is {{ yearly_sales }}</p>
+    {% endif %}
+</body>
+</html>
